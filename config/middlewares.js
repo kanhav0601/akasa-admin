@@ -1,9 +1,16 @@
 module.exports = [
-  'strapi::logger',
   'strapi::errors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ['https://akasafood.vercel.app'], // Replace with your Vercel domain
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD'],
+      credentials: true,
+    },
+  },
   'strapi::security',
-  'strapi::cors',
   'strapi::poweredBy',
+  'strapi::logger',
   'strapi::query',
   'strapi::body',
   'strapi::session',
