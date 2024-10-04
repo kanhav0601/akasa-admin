@@ -3,7 +3,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['*'], 
+      origin: ['https://akasafood.vercel.app/'], 
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD'],
       credentials: true,
     },
